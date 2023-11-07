@@ -1,10 +1,26 @@
 # C# ASP.NET MVC Razor Style Guide
 
-## Getting started
+This repo is designed to be a guide for best practices for developing ASP.NET applications using clean architecture.
 
-1. Build
-2. Run
-3. Watch
+Project Structure:
+
+/
+├── src/
+│   ├── Domain/
+│   ├── Application/
+│   ├── Infrastructure/
+│   └── WebUI/
+└── tests/
+    ├── UnitTests/
+    └── IntegrationTests/
+
+## Technologies
+
+* ASP.NET 6.0
+* Entity Framework 6
+* Razor Pages
+* XUnit
+* Playwright
 
 ## Projects
 
@@ -15,39 +31,14 @@
   ```
   Open browser and go to: `https://localhost:<PORT>/swagger/index.html`
 
-### DAL
-  Library for working with db and providing dbcontext.
-
-### Web
-  MVC Razor web app
-
-### Test
-  ```shell
-  cd Test
-  dotnet test
-  ...
-  Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - Test.dll (net6.0)
-  ```
-  XUnit test project
-  Selenium/Playwright
-
-## Key concepts
-
-* .NET 6.0
-* xunit
-* test automation
-* entity framework
-* controllers/models
-* branch strategy
-* Repository pattern
-* how to create razor pages
-* Azure API Management
 
 ## Docs
 
-[Razor](./docs/Razor.md)
+[Razor](./Docs/Razor.md)
 
-[MVC](./docs/MVC.md)
+[MVC](./Docs/MVC.md)
 
-[Entity Framework](./docs/EntityFramework.md)
-  
+[Entity Framework](./Docs/EntityFramework.md)
+
+## Reference
+
