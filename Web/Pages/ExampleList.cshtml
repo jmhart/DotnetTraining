@@ -4,3 +4,8 @@
 }
 <h2>@ViewData["Title"]</h2>
 <p>List of examples!</p>
+
+@foreach (var example in Model.Examples)
+{
+    <p><a asp-page="/@example">@example</a></p>
+}
