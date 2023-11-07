@@ -1,3 +1,5 @@
+# Razor
+
 Razor Pages is a feature of ASP.NET Core that makes coding page-focused scenarios easier and more productive.
 
 * Razor Syntax: Razor is a markup syntax for embedding server-based code into webpages. The Razor syntax is a combination of C# and HTML. Pre-existing HTML files can be converted to Razor files by simply changing the file extension from .html to .cshtml (for C#) or .vbhtml (for VB).
