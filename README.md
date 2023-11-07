@@ -16,21 +16,20 @@
   Open browser and go to: `https://localhost:<PORT>/swagger/index.html`
 
 ### DAL
-  Library for working with db
+  Library for working with db and providing dbcontext.
 
 ### Web
   MVC Razor web app
 
 ### Test
-From the root directory or in /Test
-```shell
-cd Test
-dotnet test
-...
-Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - Test.dll (net6.0)
-```
-XUnit test project
-Selenium/Playwright
+  ```shell
+  cd Test
+  dotnet test
+  ...
+  Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - Test.dll (net6.0)
+  ```
+  XUnit test project
+  Selenium/Playwright
 
 ## Key concepts
 
@@ -43,4 +42,12 @@ Selenium/Playwright
 * Repository pattern
 * how to create razor pages
 * Azure API Management
+
+## Docs
+
+[Razor](./docs/Razor.md)
+
+[MVC](./docs/MVC.md)
+
+[Entity Framework](./docs/EntityFramework.md)
   
