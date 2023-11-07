@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace DAL
+namespace Infra
 {
     public class ExampleDbContext : DbContext
     {
