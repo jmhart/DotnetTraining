@@ -1,3 +1,5 @@
+# Entity Framework
+
 Entity Framework (EF) is an open-source object-relational mapping (ORM) framework for .NET. Here are the key concepts:
 
 * DbContext: This is the primary class that is responsible for interacting with the database. It's a bridge between your domain or entity classes and the database.
