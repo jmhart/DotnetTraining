@@ -58,4 +58,6 @@ Project Structure:
 - [ ] Playwright
 
 ## Resources
-- [ ] Add additional resources here for deeper learning.
+[Common C# code conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions#style-guidelines)
+[Google C# Style Guide](https://google.github.io/styleguide/csharp-style.html)
+
