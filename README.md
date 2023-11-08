@@ -54,5 +54,8 @@ Project Structure:
 
 [Entity Framework](./Docs/EntityFramework.md)
 
+- [ ] XUnit
+- [ ] Playwright
+
 ## Resources
 - [ ] Add additional resources here for deeper learning.
