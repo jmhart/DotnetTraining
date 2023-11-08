@@ -63,7 +63,7 @@ This is the entry point of the application. It's an ASP.NET Razor Pages project 
 * XUnit
 * Playwright
 
-## Docs
+## Glossary
 
 [Razor](./Docs/Razor.md)
 
@@ -80,9 +80,8 @@ This is the entry point of the application. It's an ASP.NET Razor Pages project 
 
 [C# Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
 
-[Common C# code conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions#style-guidelines)
+[Common C# code conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 
 [Google C# Style Guide](https://google.github.io/styleguide/csharp-style.html)
 
 [Clean Code .NET](https://github.com/thangchung/clean-code-dotnet)
-
