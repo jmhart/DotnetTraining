@@ -75,6 +75,14 @@ This is the entry point of the application. It's an ASP.NET Razor Pages project 
 - [ ] Playwright
 
 ## Resources
+
+[Microsoft naming guidelines](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
+
+[C# Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
+
 [Common C# code conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions#style-guidelines)
+
 [Google C# Style Guide](https://google.github.io/styleguide/csharp-style.html)
+
+[Clean Code .NET](https://github.com/thangchung/clean-code-dotnet)
 
