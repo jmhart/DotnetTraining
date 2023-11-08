@@ -1,4 +1,26 @@
 ﻿@page
 @model RazorPageModel
+@using Web.Helpers
 <h2>@ViewData["Title"]</h2>
 <p>Example Razor Page!</p>
+
+@Html.MarkdownToHtml(@"```
+
+@page
+@model IndexModel
+<h2>@ViewData[""Title""]</h2>
+<p>Welcome to Razor Pages!</p>
+
+@code {
+    public class IndexModel : PageModel
+    {
+        public void OnGet()
+        {
+            ViewData[""Title""] = ""Home Page"";
+        }
+    }
+}
+
+```")
+
+
