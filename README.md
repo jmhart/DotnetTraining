@@ -24,6 +24,23 @@ Project Structure:
     └── Integration/
     └── EndToEnd/
 ```
+This repo is split into multiple projects.
+
+### Domain
+
+This project contains all entities, enums, exceptions, interfaces, types and logic specific to the domain layer.
+
+### App
+
+This project contains all application logic. It is dependent on the domain layer, but has no dependencies on any other layer or project.
+
+### Infra
+
+This project contains classes for accessing external resources such as file systems, web services, SMTP, and so on. These classes should implement interfaces defined within the application layer.
+
+### Web
+
+This is the entry point of the application. It's an ASP.NET Razor Pages project and depends on both the Application and Infrastructure layers. However, the dependency on Infrastructure is only to support dependency injection. Therefore, at runtime, this layer does not directly depend on Infrastructure.
 
 ## Projects
 
