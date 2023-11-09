@@ -1,3 +1,5 @@
+using Infra.API.Interfaces;
+using Infra.API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,12 @@ builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<Infra.Data.ExampleDbContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddHttpClient<ILocationService, LocationService>(client =>
+{
+    // TODO: extend base address if possible to include the "search" portion.
+    client.BaseAddress = new Uri("https://nominatim.openstreetmap.org/");
+});
 
 var app = builder.Build();
 
