@@ -55,6 +55,20 @@ This is the entry point of the application. It's an ASP.NET Razor Pages project 
 | Test.Integration | <pre>cd Test/Integration<br>dotnet build<br></pre> | <pre>cd Test/Integration<br>dotnet test<br></pre> | <pre>cd Test/Integration<br>dotnet watch<br></pre> |
 | Test.EndToEnd    | <pre>cd Test/EndToEnd<br>dotnet build<br></pre>    | <pre>cd Test/EndToEnd<br>dotnet test<br></pre>    | <pre>cd Test/EndToEnd<br>dotnet watch<br></pre>    |
 
+### Testing
+
+Generate code coverage:
+```shell
+cd Test
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov
+```
+
+Run playwright tests:
+```shell
+cd Test/PlaywrightTests
+dotnet test -- NUnit.NumberOfTestWorkers=5
+```
+
 ## Technologies
 
 * ASP.NET 6.0
