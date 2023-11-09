@@ -16,17 +16,9 @@ namespace Infra.API.Services
         public async Task<Location?> GetLocationAsync(string city, string state)
         {
             string query = $"city={city}&state={state}&format=json";
-            httpClient.DefaultRequestHeaders.Add("Accept", "text/plain");
-            var response = await httpClient.GetAsync($"search?{query}");
+            var locations = await httpClient.GetFromJsonAsync<List<Location>>($"search?{query}");
 
-            if (response.StatusCode != System.Net.HttpStatusCode.OK)
-            {
-                return null;
-            }
-
-            var location = await response.Content.ReadFromJsonAsync<Location>();
-
-            return location;
+            return locations?.FirstOrDefault();
         }
     }
 }

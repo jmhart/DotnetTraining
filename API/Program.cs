@@ -17,7 +17,9 @@ builder.Services.AddDbContext<Infra.Data.ExampleDbContext>(options => options.Us
 builder.Services.AddHttpClient<ILocationService, LocationService>(client =>
 {
     // TODO: extend base address if possible to include the "search" portion.
+    // TODO: Put baseUrl in a configured location to avoid magic strings.
     client.BaseAddress = new Uri("https://nominatim.openstreetmap.org/");
+    client.DefaultRequestHeaders.Add("User-Agent", "DemoAPI");
 });
 
 var app = builder.Build();

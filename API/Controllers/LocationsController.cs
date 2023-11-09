@@ -24,8 +24,8 @@ namespace API.Controllers
             {
                 return BadRequest();
             }
-            var location = await locationService.GetLocationAsync(city, state);
 
+            var location = await locationService.GetLocationAsync(city, state);
             if (location is null)
             {
                 return NoContent();
