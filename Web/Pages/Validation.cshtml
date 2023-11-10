@@ -1,5 +1,23 @@
 ﻿@page
-@model Web.Pages.ValidationModel
-@{
-}
+@model ValidationModel
+
+@using Web.Helpers
+
 <h2>@ViewData["Title"]</h2>
+<form method="post">
+    <label asp-for="PizzaOrder.Name"></label>
+    <input asp-for="PizzaOrder.Name" />
+
+    <label asp-for="PizzaOrder.Email"></label>
+    <input asp-for="PizzaOrder.Email" />
+
+    <label asp-for="PizzaOrder.Size"></label>
+    <input asp-for="PizzaOrder.Size" />
+    <span asp-validation-for="PizzaOrder.Size"></span>
+
+    <label asp-for="PizzaOrder.Toppings"></label>
+    <input asp-for="PizzaOrder.Toppings" />
+    <span asp-validation-for="PizzaOrder.Toppings"></span>
+
+    <button type="submit">Submit</button>
+</form>

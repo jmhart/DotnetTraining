@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
+using Domain.Entities.API;
 using Infra.API.Interfaces;
-using Infra.API.Models;
+
 
 namespace Infra.API.Services
 {

@@ -1,6 +1,5 @@
-using Domain.Entities.API.Responses;
+using Domain.Responses;
 using Infra.API.Interfaces;
-using Infra.API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;

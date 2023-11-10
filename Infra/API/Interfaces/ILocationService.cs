@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Infra.API.Models;
+using Domain.Entities.API;
+
 
 namespace Infra.API.Interfaces
 {

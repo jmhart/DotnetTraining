@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
-using System.Security.Cryptography.X509Certificates;
+using Domain.Entities.API;
 using Infra.API.Interfaces;
-using Infra.API.Models;
+
 
 namespace Infra.API.Services
 {
