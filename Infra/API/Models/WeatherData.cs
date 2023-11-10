@@ -5,6 +5,6 @@ namespace Infra.API.Models
     public class WeatherData
     {
         [JsonPropertyName("daily")]
-        public DailyTemperature? DailyTemperature { get; init; }
+        public DailyTemperature DailyTemperature { get; init; } = new();
     }
 }

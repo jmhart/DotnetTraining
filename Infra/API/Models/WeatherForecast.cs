@@ -4,7 +4,14 @@ namespace Infra.API.Models
 {
     public class WeatherForecast
     {
-        [JsonPropertyName("daily")]
-        public DailyTemperature? DailyTemperature { get; init; }
+        public string Date { get; init; }
+        public double High { get; set; }
+        public double Low { get; set; }
+
+        public WeatherForecast(string date)
+        {
+            this.Date = date;
+        }
+
     }
 }

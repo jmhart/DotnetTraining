@@ -9,12 +9,12 @@ namespace Infra.API.Models
     public class DailyTemperature
     {
         [JsonPropertyName("time")]
-        public string[]? Dates { get; init; }
+        public List<string> Dates { get; init; } = new();
 
         [JsonPropertyName("temperature_2m_min")]
-        public double[]? MinimumTemperatures { get; init; }
+        public List<double> MinimumTemperatures { get; init; } = new();
 
         [JsonPropertyName("temperature_2m_max")]
-        public double[]? MaxTemperatures { get; init; }
+        public List<double> MaxTemperatures { get; init; } = new();
     }
 }

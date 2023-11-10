@@ -24,8 +24,18 @@ namespace Infra.API.Services
 
         public List<WeatherForecast> GetWeatherForecast(WeatherData weatherData)
         {
-            // TODO: Pick up here.
-            throw new NotImplementedException();
+            var weatherForecasts = new List<WeatherForecast>();
+
+            for (int i = 0; i < weatherData.DailyTemperature.Dates.Count; i++)
+            {
+                weatherForecasts.Add(new(weatherData.DailyTemperature.Dates[i])
+                {
+                    High = weatherData.DailyTemperature.MaxTemperatures[i],
+                    Low = weatherData.DailyTemperature.MinimumTemperatures[i]
+                });
+            }
+
+            return weatherForecasts;
         }
     }
 }
