@@ -10,8 +10,7 @@ namespace Infra.API.Models
 
         public WeatherForecast(string date)
         {
-            this.Date = date;
+            Date = date;
         }
-
     }
 }

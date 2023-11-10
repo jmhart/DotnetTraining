@@ -17,7 +17,6 @@ namespace Unit.API
             {
                 BaseAddress = new Uri("https://api.open-meteo.com/v1/"),
             };
-            //httpClient.DefaultRequestHeaders.Add("User-Agent", "DemoAPI");
 
             weatherService = new WeatherService(httpClient);
         }

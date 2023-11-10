@@ -22,6 +22,12 @@ builder.Services.AddHttpClient<ILocationService, LocationService>(client =>
     client.DefaultRequestHeaders.Add("User-Agent", "DemoAPI");
 });
 
+builder.Services.AddHttpClient<IWeatherService, WeatherService>(client =>
+{
+    // TODO: Put baseUrl in a configured location to avoid magic strings.
+    client.BaseAddress = new Uri("https://api.open-meteo.com/v1/");
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

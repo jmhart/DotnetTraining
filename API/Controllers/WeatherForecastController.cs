@@ -1,3 +1,6 @@
+using Domain.Entities.API.Responses;
+using Infra.API.Interfaces;
+using Infra.API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -6,27 +9,30 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly IWeatherService weatherService;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(IWeatherService weatherService)
     {
-        _logger = logger;
+        this.weatherService = weatherService;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpGet("{latitude}/{longitude}")]
+    public async Task<ActionResult<WeatherForecastResponse>> Get(double latitude, double longitude)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        var weatherData = await weatherService.GetWeatherAsync(latitude, longitude);
+
+        if (weatherData is null)
         {
-            Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+            return BadRequest();
+        }
+
+        var weatherForecasts = weatherService.GetWeatherForecast(weatherData);
+        var response = new WeatherForecastResponse
+        {
+            WeatherForecast = weatherForecasts
+        };
+
+        return Ok(response);
     }
 }

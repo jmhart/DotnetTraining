@@ -16,7 +16,9 @@ namespace Infra.API.Services
 
         public async Task<WeatherData?> GetWeatherAsync(double latitude, double longtitude)
         {
-            string query = $"forecast?latitude={latitude}&longitude=-{longtitude}&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph";
+            string query = $"forecast?latitude={latitude}&longitude={longtitude}&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph";
+
+            // TODO: handle bad requests.
             var weatherData = await httpClient.GetFromJsonAsync<WeatherData>($"{query}");
 
             return weatherData;
